@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:siirhane/routes/intro.dart';
 import 'package:siirhane/routes/signIn.dart';
+import 'package:siirhane/routes/signUp.dart';
 import 'package:siirhane/routes/welcome.dart';
 import 'package:siirhane/utils/themes.dart';
 
@@ -25,7 +26,8 @@ class Siirhane extends StatelessWidget {
             routes: {
               Intro.routeName: (context) => Intro(),
               Welcome.routeName: (context) => Welcome(),
-              SignIn.routeName: (context) => SignIn()
+              SignIn.routeName: (context) => SignIn(),
+              SignUp.routeName: (context) => SignUp()
             });
       });
 }

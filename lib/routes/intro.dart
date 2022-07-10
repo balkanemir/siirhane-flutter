@@ -44,7 +44,7 @@ class _IntroState extends State<Intro> {
     return Scaffold(
         backgroundColor: Theme.of(context).primaryColor,
         body: Center(
-            child: Text('Şiirhane',
+            child: Text('Şiirhane.',
                 style: GoogleFonts.allison(
                   color: backgroundWhite,
                   fontSize: 80.0,

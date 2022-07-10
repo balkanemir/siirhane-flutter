@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:siirhane/routes/signUp.dart';
 import 'package:siirhane/utils/colors.dart';
 import 'package:siirhane/utils/dimensions.dart';
 import 'package:siirhane/utils/screensizes.dart';
@@ -25,7 +26,7 @@ class _SignInState extends State<SignIn> {
           child: Container(
         height: screenHeight(context, dividedBy: 3),
         child: Center(
-          child: Text('Şiirhane',
+          child: Text('Şiirhane.',
               style: GoogleFonts.allison(
                 color: Theme.of(context).primaryColor,
                 fontSize: 80.0,
@@ -37,7 +38,7 @@ class _SignInState extends State<SignIn> {
           child: Column(children: [
             Container(
               margin: EdgeInsets.all(Dimension.regularMargin),
-              child: Text("Giriş Yap",
+              child: Text("Giriş Yap.",
                   style: GoogleFonts.livvic(
                       color: backgroundBlack, fontSize: 20.0)),
             ),
@@ -56,18 +57,18 @@ class _SignInState extends State<SignIn> {
                         child: Row(children: [
                           const Icon(Icons.email, color: Colors.grey),
                           const SizedBox(width: 4),
-                          const Text('Email',
+                          const Text('Email.',
                               style: TextStyle(color: Colors.grey))
                         ])),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: primaryPurple,
+                        color: Theme.of(context).primaryColor,
                         width: 1.5,
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: primaryPurple,
+                        color: Theme.of(context).primaryColor,
                         width: 1.5,
                       ),
                     ),
@@ -88,18 +89,18 @@ class _SignInState extends State<SignIn> {
                         child: Row(children: [
                           const Icon(Icons.password, color: Colors.grey),
                           const SizedBox(width: 4),
-                          const Text('Şifre',
+                          const Text('Şifre.',
                               style: TextStyle(color: Colors.grey)),
                         ])),
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: primaryPurple,
+                        color: Theme.of(context).primaryColor,
                         width: 1.5,
                       ),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: primaryPurple,
+                        color: Theme.of(context).primaryColor,
                         width: 1.5,
                       ),
                     ),
@@ -116,7 +117,7 @@ class _SignInState extends State<SignIn> {
                 onPressed: () {
                   // go to main page
                 },
-                child: const Text('Giriş Yap'),
+                child: const Text('Giriş Yap.'),
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                         Theme.of(context).primaryColor),
@@ -131,6 +132,9 @@ class _SignInState extends State<SignIn> {
           const SizedBox(height: 70)
         ]),
       ),
+        TextButton(onPressed: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp()));
+      }, child: Text('Hesabın yok mu? Kayıt ol.'))
     ]));
   }
 }
