@@ -16,12 +16,14 @@ class Themes {
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: backgroundBlack,
     primaryColor: primaryPurpleDark,
-    colorScheme: ColorScheme.light()
+    colorScheme: ColorScheme.light(),
+    canvasColor: backgroundWhite,
   );
 
     static final lightTheme = ThemeData(
     scaffoldBackgroundColor: backgroundWhite,
     primaryColor: primaryPurple,
-    colorScheme: ColorScheme.light()
+    colorScheme: ColorScheme.light(),
+    canvasColor: backgroundBlack,
   );
 }
