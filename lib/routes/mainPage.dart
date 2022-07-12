@@ -26,6 +26,6 @@ class _MainPageState extends State<MainPage> {
           )),
       elevation: 0,
     ),
-    body: ListView(children: [PostCard(), PostCard()]));
+    body: ListView(children: [PostCard(), PostCard(),PostCard(),PostCard(),PostCard(),PostCard()]));
   }
 }

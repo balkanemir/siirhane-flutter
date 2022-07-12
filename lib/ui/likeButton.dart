@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:like_button/like_button.dart';
 
 class like_button extends StatefulWidget {
@@ -31,10 +32,9 @@ class _LikeButtonState extends State<like_button> {
             var color = isLiked ? Theme.of(context).primaryColor  : Colors.grey;
             Widget result;
             if (count == 0) {
-              result = Text(
-                "Beğen",
-                style: TextStyle(color: color),
-              );
+              result =  Text('  Beğen.',
+                            style: GoogleFonts.livvic(
+                                color: Colors.grey, fontSize: 14.0, fontWeight: FontWeight.w600),);
             } else
               result = Text(
                 text,

@@ -7,6 +7,7 @@ class NavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+      elevation: 5,
       child: ListView(
         // Remove padding
         padding: EdgeInsets.zero,
@@ -14,10 +15,10 @@ class NavBar extends StatelessWidget {
           UserAccountsDrawerHeader(
             accountName:  Text('Emir Balkan',
                         style: GoogleFonts.livvic(
-                            color: backgroundWhite, fontSize: 14.0, fontWeight: FontWeight.bold)),
+                            color: Theme.of(context).canvasColor, fontSize: 14.0, fontWeight: FontWeight.bold)),
             accountEmail: Text('emir_balkan@hotmail.com',
                         style: GoogleFonts.livvic(
-                            color: backgroundWhite, fontSize: 14.0)),
+                            color: Theme.of(context).canvasColor, fontSize: 14.0)),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
                 child: Image.network(
@@ -29,34 +30,34 @@ class NavBar extends StatelessWidget {
               ),
             ),
             decoration: BoxDecoration(
-              color: Theme.of(context).canvasColor,
-              image: DecorationImage(
-                  fit: BoxFit.fill,
-                  image: NetworkImage(
-                      'https://images.unsplash.com/photo-1544954617-f5c6b0d16164?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHNjYXBlJTIwcGhvdG9ncmFwaHl8ZW58MHx8MHx8&w=1000&q=80')),
+              color: Theme.of(context).scaffoldBackgroundColor,
+              
             ),
           ),
           ListTile(
-            leading: Icon(Icons.person, color: Theme.of(context).canvasColor),
+            tileColor: Theme.of(context).primaryColor,
+            leading: Icon(Icons.person, color: backgroundWhite),
             title:  Text('Profil',
                         style: GoogleFonts.livvic(
-                            color: Theme.of(context).canvasColor, fontSize: 14.0)),
+                            color: backgroundWhite, fontSize: 14.0)),
             onTap: () => null,
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.settings, color: Theme.of(context).canvasColor),
+            tileColor: Theme.of(context).primaryColor,
+            leading: Icon(Icons.settings, color: backgroundWhite),
             title:  Text('Ayarlar',
                         style: GoogleFonts.livvic(
-                            color: Theme.of(context).canvasColor, fontSize: 14.0)),
+                            color: backgroundWhite, fontSize: 14.0)),
             onTap: () => null,
           ),
           Divider(),
           ListTile(
-            leading: Icon(Icons.exit_to_app, color: Theme.of(context).canvasColor),
+            tileColor: Theme.of(context).primaryColor,
+            leading: Icon(Icons.exit_to_app, color: backgroundWhite),
             title:  Text('Çıkış Yap',
                         style: GoogleFonts.livvic(
-                            color: Theme.of(context).canvasColor, fontSize: 14.0)),
+                            color: backgroundWhite, fontSize: 14.0)),
             onTap: () => null,
           ),
         ],

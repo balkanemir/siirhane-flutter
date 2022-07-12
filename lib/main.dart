@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:siirhane/routes/postPage.dart';
 import 'package:siirhane/routes/intro.dart';
 import 'package:siirhane/routes/mainPage.dart';
 import 'package:siirhane/routes/signIn.dart';
@@ -30,6 +31,7 @@ class Siirhane extends StatelessWidget {
               SignIn.routeName: (context) => SignIn(),
               SignUp.routeName: (context) => SignUp(),
               MainPage.routeName: (context) => MainPage(),
+              PostPage.routeName: (context) => PostPage()
             });
       });
 }
